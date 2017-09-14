@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>My Project</title>
-	<link rel="stylesheet" href="public/styles/style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="public/styles/easy-autocomplete.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400" rel="stylesheet">
+    <script src="https://use.fontawesome.com/455b5ce365.js"></script>
+    <link rel="stylesheet" href="public/styles/style.css">
+    <title>Bikeshare - Toronto</title>
 </head>
+
 <body>
 
-	<div class="container">
-		<h1>Hello Drew</h1>
-	</div>
+    <header id="landingPage">
+        <div class="wrapper">
+            <h1>Find Your Bikeshare!</h1>
+            <form class="station" id="station" method="get" action="#bikeResponse">
+                <input class="usersLocay" type="text" id="match" placeholder="Whats Your Intersection?" required>
+                <input type="submit" form="station" class="submitBtn" value="Find" onclick="location.href='#bikeResponse'"></input>
+            </form>
+            <div class="container" id="artwork"></div>
+        </div>
+    </header>
+    <section id="bikeResponse">
+        <div class="wrapper">
+            <h1 class="choosenStation"></h1>
+            <div class="bikeInfo" id="bikeInfo clearfix">
+                <div class="fBBox clearfix">
+                    <h2>Free Bikes</h2>
+                    <div class="freeBikes"></div>
+                    <div class="fBIcon"></div>
+                </div>
+                <div class="eSBox clearfix">
+                    <h2>Empty Slots</h2>
+                    <div class="emptySlots"></div>
+                    <div class="eSIcon"></div>
+                </div>
+                <div id="map"></div>
+            </div>
+            <a href="#landingPage"><button class="findAnother">Find Another!</button></a>
+        </div>
+    </section>
 
-	<script src="public/scripts/main.js"></script>
-	
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADYYdqQtK1lxUZMfHK4q7TqbFskX3Meo4&callback=initMap">
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="dev/scripts/jquery.easy-autocomplete.min.js"></script>
+    <script src="public/scripts/scripts.js"></script>
 </body>
+
 </html>

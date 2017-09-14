@@ -1,0 +1,42 @@
+@mixin respond-to($breakpoint) {
+    @if $breakpoint=="mobile" {
+        @media (max-width: 727px) {
+            @content;
+        }
+    }
+}
+
+@include respond-to('mobile') {
+    .bikeInfo{
+        display: block;
+        text-align: center;
+    }
+
+    section h1 {
+        font-size: 40px;
+    }
+
+    .fBBox , .eSBox {
+        display: inline-block;
+        white-space: initial;
+        margin: -75px 30px;
+        transform: scale(0.7);
+    }
+
+    .fBIcon , .eSIcon {
+        transform: scale(1.05)
+    }
+
+    #map{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 80vw;
+        height: 200px;
+    }
+
+    .findAnother{
+        margin-top: 225px;
+    }
+
+}

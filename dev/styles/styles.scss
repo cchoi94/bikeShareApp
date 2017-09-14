@@ -1,0 +1,129 @@
+@import "partials/mixins";
+
+/*SETUP*/
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; margin-top: -54px}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { box-sizing: border-box; }
+
+html{
+    font-family: 'Dosis';
+    font-size: 14px;
+}
+
+body{
+    background: #e5e5e5;
+}
+
+/*HEADINGS*/
+
+h1{
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #4ac358;
+}
+
+section h1{
+    font-size: 45px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.bikeInfo h2{
+    font-size: 40px;
+}
+
+/*HEADER*/
+
+header, section{
+    height: 100vh;
+}
+
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.70) 5%, rgba(0, 0, 0, 0.71) 100%),url(../../assets/heroImg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header .wrapper{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 30px;
+}
+
+.wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+}
+
+input{
+    width: 350px;
+    height: 55px;
+    margin: 20px 0;
+}
+
+.submitBtn{
+    width: 300px;
+}
+
+button, .submitBtn{
+    padding: 10px 80px;
+    margin-top: 1.618%;
+    color: #fff;
+    background-color: #4ac358;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+/*SECTION*/
+
+.bikeInfo{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+section .wrapper {
+    text-align: center;
+}
+
+#map{
+width: 45%;
+}
+
+.fBBox , .eSBox {
+    max-width: 25%;
+    height: 100%;
+}
+
+.fBIcon, .eSIcon{
+    height: 125px;
+    margin: 50px 0;
+    background-size: cover;
+    position: relative;
+    bottom: 0
+}
+
+.fBIcon{
+    background-image: url(../../assets/bikeIcon.svg);
+}
+
+.eSIcon{
+    background-image: url(../../assets/empty.svg);
+}
+
+.freeBikes, .emptySlots{
+    color: #4ac358;
+    font-size: 50px;
+}
+
+section button{
+    left: 50%;
+    margin-top: 40px;
+}
